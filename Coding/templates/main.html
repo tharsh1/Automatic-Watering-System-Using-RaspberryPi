@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ title }}</title>
+
+   <!--  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> -->
+
+	<style>
+
+	* 
+	{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	}
+
+	body 
+	{
+ 		display: block;
+		height: auto;
+ 		background-image: url('https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+	}
+
+	.bgimg 
+	{
+	  position: fixed;
+	  z-index: -1;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100vh;
+	  background-image: url(https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+	  background-size: cover;
+	  background-position: center;
+  
+  		&::before 
+  		{
+	    content: 'Media Query: Max (larger than 900px by 720px)';
+	    position: absolute;
+	    display: block;
+	    width: auto;
+	    left: 0;
+	    background-color: #fff;
+	    padding-top: 0px;
+	   	}
+  	}
+
+	.btn-sty
+  	{
+  		padding-top: 10px;
+  	}
+
+  	.btn 
+  	{
+  		background-color:  #d2fcc7;
+      border: none;
+      color: #0b3a11;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 10px;
+  		width:230px
+  	}
+
+
+  	/* iPhone 5/SE */
+	@media only screen  and (min-width: 320px) 
+	{
+  		.col-md-12
+  		{
+  			padding-bottom: 15px;
+  		}
+
+  		.page-header
+  		{
+  			padding-top :10px;
+  		}
+
+  		.btn-sty
+  		{
+  			padding-top: 20px;
+  			margin-left: 30px;
+  		}
+
+  		.btn
+  		{
+  			height: 50px;
+  			font-size: 20px;
+  		}
+	}
+
+
+	/* Galaxy S5 */
+	@media only screen  and (min-width: 360px) and (min-height: 640px)
+	{
+  		.col-md-12
+  		{
+  			padding-bottom: 68px;
+  		}
+
+  		.page-header
+  		{
+  			padding-top: 10px;
+  			padding-bottom: 15px;
+  		}
+
+  		.btn
+  		{
+  			margin-left: 20px;
+  			font-size:20px;
+  		}
+
+  		.btn-sty
+  		{
+  			padding-top: 30px;
+  		}
+
+  		body
+  		{
+  			display: block;
+			height: auto;
+ 			background-image: url('https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+ 			background-size: 100px 100px;
+  		}
+
+  		background-image: url(https://placeimg.com/900/720/any);
+	    &::before {
+	      content: 'Media Query: min-width: 360px, min-height: 640px';
+		}
+	}
+
+	/* 	Pixel 2 */
+	@media only screen  and (min-width :411px) and (max-width: 731px) 
+	{
+  		.col-md-12
+  		{
+  			padding-bottom: 64px;
+  		}
+
+  		.page-header
+  		{
+  			padding-top: 20px;
+  			padding-bottom: 20px;
+  		}
+
+  		h1
+  		{
+  			font-size: 50px;
+  		}
+
+  		.btn
+  		{
+  			width: 300px;
+  			font-size: 28px;
+  			margin-left: 20px;
+  		}
+	}
+
+    /* iPad Pro */ 
+    @media only screen  and (min-width :768px) and (min-height :1024px)
+  {
+      .col-md-12
+      {
+        padding-bottom: 140px;
+      }
+
+      .page-header
+      {
+        padding-top: 20px;
+        /*padding-bottom: 20px;*/
+      }
+
+      h1
+      {
+        font-size: 80px;
+        padding-left: 30px;
+      }
+
+      h2
+      {
+        padding-bottom: 30px;
+        font-size: 50px;
+              padding-left: 30px;
+      }
+
+      .btn
+      {
+        width: 500px;
+        height: 80px;
+        font-size: 35px;
+        margin-left:120px;
+      }
+
+      .btn-sty
+      {
+        padding-bottom: 20px;
+      }
+  }
+
+  @media only screen  and (min-width :1280px) and (min-height :800px)
+  {
+      .col-md-12
+      {
+        padding-bottom: 140px;
+      }
+
+      .page-header
+      {
+        padding-top: 10px;
+        /*padding-bottom: 20px;*/
+      }
+
+      h1
+      {
+        font-size: 50px;
+        padding-left: 30px;
+      }
+
+      h2
+      {
+        /*padding-bottom: 30px;*/
+        font-size: 40px;
+        padding-left: 30px;
+      }
+
+      .btn
+      {
+        width: 400px;
+        height: 50px;
+        font-size: 28px;
+        margin-left:100px;
+      }
+
+      .btn-sty
+      {
+        padding-bottom: 20px;
+      }
+  }
+
+	</style>
+  </head>
+  	<body>
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+		<div class="bgimg">
+			<div class="page-header">
+				<h1 style="color: #d2fcc7;padding-left: 30px;margin-bottom: 0px;font-size: 40px;">
+					Automatic Watering System
+				</h1>
+			</div>
+			<h2 style="color: #ccfcf0;padding-left: 30px;margin-bottom: 0px;font-size: 30px;">
+				{{ wl }}
+			</h2>
+			<h2 style="color: #ccfcf0;padding-left: 30px;margin-bottom: 0px;font-size: 30px;">
+				{{ text }}
+			</h2>
+			<p>
+				
+			</p>
+			<div class="btn-sty">
+                            <a href="/soil_status">
+				<button type="button" class="btn">
+					Soil Status
+				</button>
+			    </a>
+			</div>
+
+			<div class="btn-sty">
+                            <a href="/water_once">
+				<button type="button" class="btn">
+					Water Once
+				</button>
+			    </a>
+			</div>
+
+			<div class="btn-sty">
+                            <a href="/last_watered">
+				<button type="button" class="btn" >
+					Last Watered
+				</button>
+			    </a>
+			</div>
+
+			<div class="btn-sty">
+                            <a href="/total_water_supplied">
+				<button type="button" class="btn">
+					Water Supplied Today
+				</button>
+			    </a>
+			</div>
+
+			<div class="btn-sty"> 
+			    <a href="/history">
+				<button type="button" class="btn">
+					History
+                                </button>
+			    </a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+    
+  </body>
+</html>
