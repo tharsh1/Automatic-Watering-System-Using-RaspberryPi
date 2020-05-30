@@ -64,25 +64,5 @@ def his():
     tb_contents = water.history_table()
     return render_template('table.html', tbc = tb_contents)
 
-'''@app.route("/graph", methods=['GET'])
-def his_graph():
-    from_date = request.args.get('from',time.strftime("%Y-%m-%d"))
-    to_date = request.args.get('to',time.strftime("%Y-%m-%d"))
-    
-    if not validate_date(from_date):
-        from_date = time.strftime("%Y-%m-%d")
-    if not validate_date(to_date):
-        to_date = time.strftime("%Y-%m-%d")
-        
-    range = water.history_graph(from_date,to_date)
-    return render_template('Graph.html', r=range, r_items=len(range))
-
-def validate_date(d)
-    try:
-        datetime.datetime.strptime(d, "%Y-%m-%d")
-        return True
-    except ValueError:
-        return False
-'''
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080, debug=True)

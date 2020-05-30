@@ -59,15 +59,6 @@ def last_water():
     conn.close()
     return lw
 
-'''def history_graph(fd,td):
-    conn = sqlite3.connect('/var/www/AWS/AWS_db.db')
-    curs = conn.cursor()
-    curs.execute("select date(OffTime),ROUND(CAST(SUM(WaterSupplied) AS FLOAT)/1000,1) from History where date(OffTime) between ? and ? group by date(OffTime)", (fd,td))
-    r = curs.fetchall()
-    conn.commit()
-    conn.close()
-    return r'''
-
 def pump_on():
     print("Dry")
     GPIO.output(27,GPIO.LOW)
