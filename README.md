@@ -4,7 +4,7 @@
   It also includes a website so that user can monitor the system remotely. Website provides basic monitoring functionality such as checking soil status, last water supplied, water supplied today and history of all the pump and watering operations. This system has a number of applications like this can be used in farms, house olds, used in botanical garden & nursery.
 
 
-**Hardware Requirement:
+**Hardware Requirement:**
 
 •	Raspberry Pi 3 Model B+ 
 
@@ -22,6 +22,6 @@
 
 •	Resistors
 
-**The Web Application Stack:
+**The Web Application Stack:**
 
 ![Web Application Stack](https://user-images.githubusercontent.com/45987701/83345482-310ecd00-a331-11ea-9df1-8aa08cbf2fde.jpg)
